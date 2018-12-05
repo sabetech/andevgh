@@ -1,0 +1,1 @@
+<footer class="footer text-center">AndevGH Admin Panel </footer>
