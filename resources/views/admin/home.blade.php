@@ -35,18 +35,20 @@
 	            		</tr>
             		</thead>
             		<tbody>
+                        @foreach($news as $newsItem)
             			<tr>
             				<td>
-            					News Title Goes here
+            					{{ $newsItem->news_title }}
             				</td>
             				<td>
-            					News Snippet here
+            					{{ htmlspecialchars_decode(substr($newsItem->news_content, 0, 50)) }}
             				</td>
             				<td>
-            					24th December, 2018
+            					{{ $newsItem->news_date_unix }}
             				</td>
 
             			</tr>
+                        @endforeach
             		</tbody>
 
             	</table>

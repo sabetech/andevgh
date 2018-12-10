@@ -17,7 +17,7 @@
         <!--rows & Colums-->
         <div class="container text-center">
             
-            <h1><b>News Posted From YAW as ADMIN</b></h1>
+            <h1><b>News Posted From {{ $news[0]->news_author }}</b></h1>
                            
             </div>
         <div class="container" style="font-size: 15px;">
@@ -25,45 +25,15 @@
 
         <div class="col-sm-8 blog-main">
 
+          @foreach($news as $newsItem)
           <div class="blog-post">
-            <h3 class="blog-post-title"><b>New Feature</b></h3>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Admin Yaw (Full Name)</a></p>
+            <h3 class="blog-post-title"><b>{{ $newsItem->news_title }}</b></h3>
+            <p class="blog-post-meta">{{ gmdate("Y-m-d", $newsItem->news_date_unix) }} by <a href="#">{{ $newsItem->news_author }}</a></p>
 
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
-            <blockquote>
-              <p>Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device.</p>
-            </blockquote>
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign..</p>
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
+            {!! $newsItem->news_content !!}
           </div><!-- /.blog-post -->
+          @endforeach
 
-          <div class="blog-post">
-             <h3 class="blog-post-title"><b>New Feature</b></h3>
-            <p class="blog-post-meta">December 23, 2013 by <a href="#">Admin Yaw (Full Name)</a></p>
-
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
-            <blockquote>
-              <p>Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device.</p>
-            </blockquote>
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign..</p>
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h3 class="blog-post-title"><b>New Feature</b></h3>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Admin Yaw (Full Name)</a></p>
-
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
-            <ul>
-              <li>Item List</li>
-              <li>Item List</li>
-              <li>Item List</li>
-            </ul>
-            
-            
-            <p>Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
-              Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
-          </div><!-- /.blog-post -->
 
           <nav>
             <ul class="pager">
@@ -77,15 +47,10 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
               <h3><b>News Items</b></h3>
-            <a href="#" class="list-group-item active">Price 2013</a>
-            <a href="#" class="list-group-item">Products 2013</a>
-            <a href="#" class="list-group-item">Safety Tips 2013</a>
-            <a href="#" class="list-group-item">Stastics 2013</a>
-            <a href="#" class="list-group-item">Others</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+            @foreach($newsAll as $newsItem)
+            <a href="{{ url('news/'.$newsItem->id) }}" class="list-group-item active">{{ $newsItem->news_title }}</a>
+            @endforeach
+
           </div>
         </div><!--/.sidebar-offcanvas-->
             
@@ -94,14 +59,7 @@
               <h3><b>Archives</b></h3>
             <a href="#" class="list-group-item active">Price 2013</a>
             <a href="#" class="list-group-item">Products 2013</a>
-            <a href="#" class="list-group-item">Safety Tips 2013</a>
-            <a href="#" class="list-group-item">Stastics 2013</a>
-            <a href="#" class="list-group-item">Others</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+            
           </div>
         </div><!--/.sidebar-offcanvas-->
 

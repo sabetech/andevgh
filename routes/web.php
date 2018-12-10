@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home', function(){
+
+	return redirect()->route('admin_home');
+});
 
 Route::get('/', function () {
     //return view('welcome');
@@ -31,10 +35,8 @@ Route::get('/info', function () {
     return view('info');
 });
 
-Route::get('/news', function () {
-    //return view('welcome');
-    return view('news');
-});
+Route::get('/news', 'WebController@news');
+Route::get('/news/{id}', 'WebController@newsItem');
 
 
 Route::get('/services', function () {
@@ -53,7 +55,7 @@ Route::get('contact_us', function () {
 });
 
 
-Route::get('admin/home', 'AdminController@home');
+Route::get('admin/home', 'AdminController@home')->name('admin_home');
 Route::get('admin/add_news', 'AdminController@addNews');
 Route::post('admin/add_news', 'AdminController@post_addNews')->name('postNews');
 
