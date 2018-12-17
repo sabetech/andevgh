@@ -16,9 +16,11 @@
                 
         <!--rows & Colums-->
         <div class="container text-center">
-            
-            <h1><b>News Posted From {{ $news[0]->news_author }}</b></h1>
-                           
+            @if (count($news) > 0)
+            <h1><b>News Posted From {{ $news[0]->author }}</b></h1>
+            @else
+            <h1><b>No News Yet</b></h1>
+            @endif
             </div>
         <div class="container" style="font-size: 15px;">
         <div class="row">
@@ -28,7 +30,7 @@
           @foreach($news as $newsItem)
           <div class="blog-post">
             <h3 class="blog-post-title"><b>{{ $newsItem->news_title }}</b></h3>
-            <p class="blog-post-meta">{{ gmdate("Y-m-d", $newsItem->news_date_unix) }} by <a href="#">{{ $newsItem->news_author }}</a></p>
+            <p class="blog-post-meta">{{ gmdate("Y-m-d", $newsItem->news_date_unix) }} by <a href="#">{{ $newsItem->author }}</a></p>
 
             {!! $newsItem->news_content !!}
           </div><!-- /.blog-post -->

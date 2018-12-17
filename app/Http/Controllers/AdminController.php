@@ -35,7 +35,7 @@ class AdminController extends Controller
 
         $news = new News;
         $news->news_title = $posted['news_title'];
-        $news->news_author = $posted['news_author'];
+        $news->author = $posted['news_author'];
         $news->news_date_unix = isset($posted['news_date']) ? strtotime($posted['news_date']) : strtotime(date("Y-m-d"));    
         $news->news_content = $posted['news_content'];
 

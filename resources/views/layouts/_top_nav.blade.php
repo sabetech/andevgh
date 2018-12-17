@@ -55,6 +55,7 @@
                         <li><a href="{{ url('/products') }}">Products</a></li>
                         <!--<li><a href="ordergas.html">Online Gas</a></li>-->
                         <li><a href="{{ url('/contact_us') }}">Contact</a></li>
+                        <li><a href="{{ url('/admin/home') }}">Admin</a></li>
                     </ul>
                 </div><!--End of collapsenavbar-->
             </div><!--End of container-->
