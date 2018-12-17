@@ -15,6 +15,11 @@ Route::get('/home', function(){
 	return redirect()->route('admin_home');
 });
 
+Route::get('/logout', function(){
+	Auth::logout();
+	return redirect()->route('login');
+});
+
 Route::get('/', function () {
     //return view('welcome');
     return view('index');
