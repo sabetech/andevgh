@@ -41,7 +41,7 @@
             					{{ $newsItem->news_title }}
             				</td>
             				<td>
-            					{{ htmlspecialchars_decode(substr($newsItem->news_content, 0, 50)) }}
+            					{!! substr($newsItem->news_content, 0, 50)) !!}
             				</td>
             				<td>
             					{{ $newsItem->news_date_unix }}
