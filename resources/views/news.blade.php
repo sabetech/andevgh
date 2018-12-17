@@ -50,7 +50,7 @@
           <div class="list-group">
               <h3><b>News Items</b></h3>
             @foreach($newsAll as $newsItem)
-            <a href="{{ url('news/'.$newsItem->id) }}" class="list-group-item active">{{ $newsItem->news_title }}</a>
+            <a href="{{ url('news/'.$newsItem->id) }}" class="list-group-item">{{ $newsItem->news_title }}</a>
             @endforeach
 
           </div>

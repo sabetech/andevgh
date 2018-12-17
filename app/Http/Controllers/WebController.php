@@ -11,7 +11,7 @@ class WebController extends Controller
 
     public function news(){
 
-    	$news = News::paginate(1);
+    	$news = News::orderby('id', 'desc')->paginate(1);
     	$newsAll = News::all();
 
     	return view('news')
