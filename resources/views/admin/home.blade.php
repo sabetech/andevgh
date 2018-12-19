@@ -44,8 +44,17 @@
             					{!! substr($newsItem->news_content, 0, 50) !!}
             				</td>
             				<td>
-            					{{ $newsItem->news_date_unix }}
+            					{{ gmdate("Y-m-d", $newsItem->news_date_unix) }}
             				</td>
+
+                            <td>
+                                <button class="btn btn-outline btn-default waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Archive</span>
+                                </button>
+                                <button class="btn btn-outline btn-primary waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Edit</span>
+                                </button>
+                                <button class="btn btn-outline btn-danger waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Delete</span>
+                                </button>
+                            </td>
 
             			</tr>
                         @endforeach

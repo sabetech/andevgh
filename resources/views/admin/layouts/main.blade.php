@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-    <title>Admin : Learning Links</title>
+    <title>Admin : Andevgh</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ url('ampleadmin/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Menu CSS -->
