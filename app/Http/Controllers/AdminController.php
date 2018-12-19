@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Input;
 use App\News;
+use App\Inbox;
 
 class AdminController extends Controller
 {
@@ -16,7 +17,7 @@ class AdminController extends Controller
 
     public function home(){
 
-        $news = News::orderBy('news_date_unix', 'desc')->paginate(10);
+        $news = News::whereNull('archived_at')->orderBy('news_date_unix', 'desc')->paginate(10);
 
     	return view('admin.home')
             ->with('news', $news);
@@ -42,5 +43,27 @@ class AdminController extends Controller
         $news->save();
 
         return redirect()->route('admin_home');
+    }
+
+    public function archive(){
+
+        $news = News::whereNotNull('archived_at')->orderBy('news_date_unix', 'desc')->paginate(10);
+
+        return view('admin.archive')
+             ->with('news', $news);
+    }
+
+    public function inbox(){
+
+        $messages = Inbox::whereNull('archived_at')
+             ->where('direction', 'incoming')
+             ->whereNull('drafted_at')
+             ->whereNull('outboxed_at')
+             ->orderBy('date_created', 'desc')->paginate(15);
+
+        return view('admin.inbox')
+            ->with('messages', $messages);
+
+
     }
 }
