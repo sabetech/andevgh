@@ -26,15 +26,15 @@
 	                        	</span>
 	                        </a>
 	                        <ul class="nav nav-second-level collapse">
-	                            <li>
+	                            <!--li>
 	                            	<a href="javascript:void(0)">
 	                            		<i class="ti-user"></i> 
 	                            		<span class="hide-menu">My Profile</span>
 	                            	</a>
-	                            </li>
+	                            </li-->
 	                            
 	                            <li>
-	                            	<a href="javascript:void(0)">
+	                            	<a href="{{ url('logout') }}">
 	                            		<i class="fa fa-power-off"></i> 
 	                            		<span class="hide-menu">Logout</span>
 	                            	</a>

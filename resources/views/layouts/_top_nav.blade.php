@@ -30,8 +30,8 @@
                 </div><!--End of navheader-->
                 <div class="collapse navbar-collapse" id="myNavbar"><!--main Nav-->
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                        <li><a href="{{ url('/team') }}">Our Team</a></li>
+                        <li class="@if (Request::is('/')) active @endif"><a href="{{ url('/') }}">Home</a></li>
+                        <li class="@if (Request::is('team')) active @endif"><a href="{{ url('/team') }}">Our Team</a></li>
                         <!--
                         <li><a href="info.html">About Us<span class="caret"></span></a>
                             <ul class="drop-menu">
@@ -43,7 +43,7 @@
                         </li>
                         -->
                         
-                        <li class="dropdown">
+                        <li class="dropdown @if ((Request::is('info')) || (Request::is('news'))) active @endif">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url('/info') }}">Info</a></li>
@@ -51,11 +51,11 @@
                             </ul>
                         </li>
                         
-                        <li><a href="{{ url('/services') }}">Services</a></li>
-                        <li><a href="{{ url('/products') }}">Products</a></li>
+                        <li class="@if (Request::is('services')) active @endif"><a href="{{ url('/services') }}">Services</a></li>
+                        <li class="@if (Request::is('products')) active @endif"><a href="{{ url('/products') }}">Products</a></li>
                         <!--<li><a href="ordergas.html">Online Gas</a></li>-->
-                        <li><a href="{{ url('/contact_us') }}">Contact</a></li>
-                        <li><a href="{{ url('/admin/home') }}">Admin</a></li>
+                        <li class="@if (Request::is('contact_us')) active @endif"><a href="{{ url('/contact_us') }}">Contact</a></li>
+                        <!--li><a href="{{ url('/admin/home') }}">Admin</a></li-->
                     </ul>
                 </div><!--End of collapsenavbar-->
             </div><!--End of container-->
