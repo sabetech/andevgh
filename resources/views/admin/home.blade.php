@@ -50,9 +50,9 @@
                             <td>
                                 <button class="btn btn-outline btn-default waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Archive</span>
                                 </button>
-                                <button class="btn btn-outline btn-primary waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Edit</span>
+                                <button class="btn btn-outline btn-primary waves-effect waves-light"> <i class="fa fa-pencil m-r-5"></i> <span>Edit</span>
                                 </button>
-                                <button class="btn btn-outline btn-danger waves-effect waves-light"> <i class="fa fa-archive m-r-5"></i> <span>Delete</span>
+                                <button class="btn btn-outline btn-danger waves-effect waves-light"> <i class="fa fa-trash m-r-5"></i> <span>Delete</span>
                                 </button>
                             </td>
 

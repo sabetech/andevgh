@@ -63,7 +63,8 @@ Route::get('contact_us', function () {
 Route::get('admin/home', 'AdminController@home')->name('admin_home');
 Route::get('admin/add_news', 'AdminController@addNews');
 Route::post('admin/add_news', 'AdminController@post_addNews')->name('postNews');
-
+Route::get('admin/archive', 'AdminController@archive')->name('archive');
+Route::get('admin/inbox', 'AdminController@inbox')->name('inbox');
 
 
 

@@ -15,7 +15,7 @@
 	                <ul class="nav" id="side-menu">
 	                    <li class="user-pro">
 	                        <a href="#" class="waves-effect">
-	                        	<img src="{{ url('imgs/profile-icon.png') }}" alt="user-img" class="img-circle"> 
+	                        	<!--img src="{{ url('imgs/profile-icon.png') }}" alt="user-img" class="img-circle"--> 
 	                        	<span class="hide-menu"> 
 	                        		@if (Auth::user())
 	                        			{{ Auth::user()->name }}
@@ -48,9 +48,15 @@
 	                    	</a>
 	                    </li>
 	                    <li class="active"> 
-	                    	<a href="{{ route('home') }}" class="waves-effect active">
+	                    	<a href="{{ route('archive') }}" class="waves-effect active">
 	                    		<i class="mdi mdi-av-timer fa-fw" data-icon="v"></i> 
 	                    		<span class="hide-menu"> Archives </span>
+	                    	</a>
+	                    </li>
+	                    <li class="active"> 
+	                    	<a href="{{ route('inbox') }}" class="waves-effect active">
+	                    		<i class="mdi mdi-av-timer fa-fw" data-icon="v"></i> 
+	                    		<span class="hide-menu"> Inbox </span>
 	                    	</a>
 	                    </li>
 	                   	
