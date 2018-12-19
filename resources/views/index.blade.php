@@ -59,20 +59,20 @@
                 <div class="col-sm-4 cl-1" >
                     <img src="imgs/prdsAcl.jpg" class="img-thumbnail" />
                     <br>
-                    <h4><a href="products.html" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>Our Products</b></a></h4>
+                    <h4><a href="{{ url('products') }}" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>Our Products</b></a></h4>
                     <br>
                 </div>
                 <div class="col-sm-4 cl-2" >
                     <img src="imgs/servicesAcl.jpg" class="img-thumbnail" />
                     <br>
-                    <h4><a href="services.html" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>Services</b></a></h4>
+                    <h4><a href="{{ url('services') }}" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>Services</b></a></h4>
                     <br>
                 </div>
                 
                 <div class="col-sm-4 cl-3">
                     <img src="imgs/news.jpg" class="img-thumbnail" />
                     <br>
-                    <h4><a href="news.html" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>News...</b></a></h4>
+                    <h4><a href="{{ url('news') }}" class="btn_hm btn_hm_1" style="line-height: 5px;"><b>News...</b></a></h4>
                     <br>
                 </div>
             </div>
