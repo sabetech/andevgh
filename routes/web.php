@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', function(){
 
-	return redirect()->route('admin_home');
+Route::get('admin/home', 'AdminController@home')->name('admin_home');
+Route::get('home', function(){
+	//why aint you working .. /
+	exit();
+	return Redirect::url('admin/home');
 });
 
 Route::get('/logout', function(){
@@ -60,7 +63,7 @@ Route::get('contact_us', function () {
 });
 
 
-Route::get('admin/home', 'AdminController@home')->name('admin_home');
+
 Route::get('admin/add_news', 'AdminController@addNews');
 Route::post('admin/add_news', 'AdminController@post_addNews')->name('postNews');
 Route::get('admin/archive', 'AdminController@archive')->name('archive');
