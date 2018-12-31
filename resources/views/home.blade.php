@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ url('admin/home') }}">Click to Enter!</a>
                 </div>
             </div>
         </div>
