@@ -59,10 +59,34 @@ class AdminController extends Controller
              ->where('direction', 'incoming')
              ->whereNull('drafted_at')
              ->whereNull('outboxed_at')
-             ->orderBy('date_created', 'desc')->paginate(15);
+             ->orderBy('created_at', 'desc')->paginate(15);
 
         return view('admin.inbox')
             ->with('messages', $messages);
+
+
+    }
+
+    public function post_contactUs(){
+
+        $name = Input::get('name');
+        $email = Input::get('email');
+        $message = Input::get('msg');
+
+        $inbox = Inbox::create([
+                    'subject' => '',
+                    'sender' => $email,
+                    'recipient' => '',
+                    'content' => $message,
+                    'status' => 'received',
+                    'direction' => 'incoming'
+                     ]);
+
+
+        return view('contact');
+
+
+
 
 
     }

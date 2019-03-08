@@ -25,7 +25,8 @@
                         <!--creating contact form-->
                         <h1><b>Contact Us</b></h1>
                         <p>Send Us A Message Using The Form Below</p>
-                        <form method="" action="">
+                        <form method="POST" action="{{ url('contact_us') }}">
+                            {{ csrf_field() }}
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control" placeholder="Enter Your Name...">
                             </div>

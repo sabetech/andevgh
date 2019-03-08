@@ -11,9 +11,9 @@
                 <div class="col-lg-2 col-md-3  col-sm-12 col-xs-12 inbox-panel">
                     <div> <a href="#" class="btn btn-custom btn-block waves-effect waves-light">Compose</a>
                         <div class="list-group mail-list m-t-20"> <a href="#" class="list-group-item active">Inbox <span class="label label-rouded label-success pull-right">{{ $messages->count() }}</span></a> <a href="#" class="list-group-item ">Starred</a> <a href="#" class="list-group-item">Draft <span class="label label-rouded label-warning pull-right">15</span></a> <a href="#" class="list-group-item">Sent Mail</a> <a href="#" class="list-group-item">Trash <span class="label label-rouded label-default pull-right">55</span></a> </div>
-                        <h3 class="panel-title m-t-40 m-b-0">Labels</h3>
+                        <!-- <h3 class="panel-title m-t-40 m-b-0">Labels</h3>
                         <hr class="m-t-5">
-                        <div class="list-group b-0 mail-list"> <a href="#" class="list-group-item"><span class="fa fa-circle text-info m-r-10"></span>Work</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-warning m-r-10"></span>Family</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-purple m-r-10"></span>Private</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-danger m-r-10"></span>Friends</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-success m-r-10"></span>Corporate</a> </div>
+                        <div class="list-group b-0 mail-list"> <a href="#" class="list-group-item"><span class="fa fa-circle text-info m-r-10"></span>Work</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-warning m-r-10"></span>Family</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-purple m-r-10"></span>Private</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-danger m-r-10"></span>Friends</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-success m-r-10"></span>Corporate</a> </div> -->
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12 mail_listing">
@@ -51,9 +51,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            	<tr class="unread">
+                            	
                             		
                             	@if ($messages->count() == 0)
+                                <tr class="unread">
                             		<td>
                             			<div class="checkbox m-t-0 m-b-0">
                                             <input type="checkbox">
@@ -64,9 +65,29 @@
 
                             		<td></td>
                             		<td></td>
+                                </tr>
+                                @else
+                                    @foreach($messages as $msg)
+                                        <tr class="unread">
+                                            <td>
+                                                <div class="checkbox m-t-0 m-b-0">
+                                                    <input type="checkbox">
+                                                    <label></label>
+                                                </div>
+                                            </td>
+                                            <td class="hidden-xs"><i class="far fa-star"></i></td>
+                                            <td class="">{{ $msg->name }}</td>
+                                            <td class="max-texts"> <a href="inbox-detail.html"><span class="label label-info m-r-10"></span> {{ $msg->content }}</a></td>
+                                            
+                                            <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
+                                            <td class="text-right"> {{ $msg->created_at }} </td>
+                                        </tr>
+                                    @endforeach
                             	@endif
-                            	</tr>
-                                <!--tr class="unread">
+
+
+                            	
+                               <!--  <tr class="unread">
                                     <td>
                                         <div class="checkbox m-t-0 m-b-0">
                                             <input type="checkbox">
@@ -92,7 +113,7 @@
                                     <td class="max-texts"><a href="inbox-detail.html">Lorem ipsum perspiciatis unde omnis iste natus error sit voluptatem</a></td>
                                     <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
                                     <td class="text-right"> May 13 </td>
-                                </tr-->
+                                </tr> -->
                                 
                             </tbody>
                         </table>
