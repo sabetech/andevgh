@@ -62,6 +62,8 @@ Route::get('contact_us', function () {
     return view('contact');
 });
 
+Route::post('contact_us', 'AdminController@post_contactUs')->name('contactus');
+
 
 
 Route::get('admin/add_news', 'AdminController@addNews');

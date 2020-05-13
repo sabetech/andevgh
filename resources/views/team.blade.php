@@ -16,6 +16,7 @@
         <!--rows & Colums-->
         <div class="container text-center">
             
+<<<<<<< HEAD
             <h1>Executive Leadership Team</h1>
             <p style="text-align: justify; font-size: 15px;">
                 <p style="text-align: justify; font-size: 15px;">
@@ -23,11 +24,6 @@
             </p>
             </p>
             
-             <p style="text-align: justify; font-size: 15px;">
-      		<b>Dr. Franklin D. Nkansah</b> holds a Ph.D. in Electrical Engineering from Lehigh University in the USA. Dr. Nkansah was the President & CEO of FDN Enterprises LLC, a US-based multi-national medium-scale business whose operations spans engineering design, technical consultancy, eMR-automation and healthcare delivery services with annual revenues in excess of $10M. In Jaunary 2006, Dr. Nkansah joined Prairie View A&M University as a Professor of Electrical Engineering after an excellent 20-plus years in the Semiconductor Industry with tours of duty in world-class research facilities of AT&T Bell Laboratories, Motorola and Advanced Micro-Devices where Transistors and Wireless Telephony were invented. Design and Manufacturing technologies developed had transistors and multi-level interconnect scalability down to 45nm dimensions, which became the genesis of Multi-core processors including QUAD-Core architectures found in today’s computing and mobile telephony. Dr. Nkansah is an embodiment of Engineering Research and Management expertise, in the areas of High-Tech Business Development, Semiconductor Computing and Wireless Telephony. During Dr. Nkansah’s tenure at Motorola, he engineered technology development thrusts which developed and deployed the world’s first 0.13µm wireless Baseband processor with Ultra-low power CMOS technology. The productization of this technology generated over $ 300M in revenues for the company Motorola. Dr. Nkansah’s engineering research over the years culminated in numerous technical publications, 5 US-patents with over 200 internal and external technical 
-presentations, which were chronicled in various microelectronic products, journal articles and conference papers.
-
-            </p>
             <!--settingn up accordion with rows & Colums-->     
           
                 <div class="container">

@@ -8,4 +8,5 @@ class Inbox extends Model
 {
 	protected $table = 'inbox';
     //
+    protected $guarded = ['id'];
 }
