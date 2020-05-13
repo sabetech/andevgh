@@ -16,11 +16,7 @@
         <!--rows & Colums-->
         <div class="container text-center">
             
-            <h1>Executive Leadership Team</h1>
-            <p style="text-align: justify; font-size: 15px;">
-                <b>Dr. Franklin D. Nkansah</b> received his Ph.D. degree in Electrical Engineering from Lehigh University in the USA. Dr. Nkansah is the President & CEO of FDN Enterprises LLC, a US-based multi-national medium-scale business whose operations spans engineering design, technical consultancy, eMR-automation and healthcare delivery services with annual revenues in excess of $5M. In Jaunary 2006, Dr. Nkansah joined Prairie View A&M University as a Professor of Electrical Engineering after an excellent 20-year career in the Microelectronics Industry with tours of duty at AT&T, Motorola and Advanced Micro-Devices. Dr. Nkansah is an embodiment of Engineering Research and Management expertise, in the areas of Business Development, Computing and Telephony. During Dr. Nkansah’s tenure at Motorola, he engineered a technology development thrust which developed the world’s first 0.13µm wireless Baseband product with Ultra-low power CMOS technology. The productization of this technology generated over $ 300M in revenues for Motorola. Dr. Nkansah’s engineering research over the years produced over 11 technical publications, 5 US-patents with over 200 internal and external technical presentations, which has been chronicled in various microelectronic products, journal articles and conference papers. 
-            </p>
-            
+            <h1>Executive Leadership Team</h1>            
              <p style="text-align: justify; font-size: 15px;">
                  <b>Mr. Andrews Baafi Owusu</b> is a Chemical Engineer by profession. He obtained a BSc in Chemical Engineering degree from the Kwame Nkrumah University of Science & Technology (KNUST) in 1988, and an MSc in Energy Trade and Finance from CASS Business School, City University London. 
 Mr. Baafi Owusu has over 25 years working experience in the Oil & Gas industry having worked in various capacities in Movement Of Products (MOP), The Processing Plants, Power House, Plant and Equipment Inspection, Chemical Laboratory, Yield Consumption and Loss. He was the head of Shipping and also worked at the Production Planning and Control/Marketing Office and other sections at Ghana’s premier oil refinery - Tema Oil Refinery (TOR) from 1989 to 2010. He exited as the Distributions Manager of TOR in 2010. 
