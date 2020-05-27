@@ -16,7 +16,7 @@
         <!--rows & Colums-->
         <div class="container text-center">
             
-<<<<<<< HEAD
+
             <h1>Executive Leadership Team</h1>
             <p style="text-align: justify; font-size: 15px;">
                 <p style="text-align: justify; font-size: 15px;">
